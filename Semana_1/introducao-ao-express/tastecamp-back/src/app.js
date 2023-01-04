@@ -24,6 +24,6 @@ server.get("/receitas", (req, responda) => {
   responda.send(receitas)
 })
 
-server.listen(5000, () => {
+server.listen(5001, () => {
   console.log('Servidor funfou de boas!!!')
 })
