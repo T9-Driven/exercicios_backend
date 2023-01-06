@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Tastecamp</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <div class="titulo">Tastecamp</div>
+      <div class="contador">Qtd de Receitas: 0</div>
+      <ul class="receitas"></ul>
+    </div>
+
+    <div class="view">
+      <div class="pagina receita escondido">
+        <div class="navbar">
+          <div class="grupo">
+            <div class="botao excluir">
+              <ion-icon name="trash-outline"></ion-icon>
+            </div>
+
+            <div class="botao adicionar">
+              <ion-icon name="add"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="titulo titulo-pagina-receita">Pão com Ovo</div>
+
+        <div class="ingredientes">
+          <div class="titulo">Ingredientes</div>
+          <div class="destaque destaque-ingredientes"></div>
+        </div>
+
+        <div class="modo-de-preparo">
+          <div class="titulo">Modo de Preparos</div>
+          <div class="destaque destaque-preparo"></div>
+        </div>
+      </div>
+
+      <div class="pagina adicionar-receita">
+        <div class="navbar">
+          <div class="grupo">
+            <div class="botao fechar">
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="titulo">Adicionar receita</div>
+
+        <div class="entrada">
+          <div class="label">Nome da Receita</div>
+          <input type="text" class="nome-receita" />
+        </div>
+
+        <div class="entrada">
+          <div class="label">Ingredientes</div>
+          <textarea class="ingredientes-receita"></textarea>
+        </div>
+
+        <div class="entrada">
+          <div class="label">Modo de Preparo</div>
+          <textarea class="modo-preparo-receita"></textarea>
+        </div>
+
+        <button class="salvar" onclick="adicionarReceita()">
+          <ion-icon name="save"></ion-icon>
+          Adicionar receita
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/scripts.js">
+  </script>
+</body>
+
+</html>
