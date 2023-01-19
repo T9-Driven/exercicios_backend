@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  transition: all ease .2s;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 336px;
+  background-color: #29313d;
+  color: #6C9CAD;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar .titulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 54px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar ul.receitas {
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar ul.receitas li {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, .08);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul.receitas li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.sidebar ul.receitas li:hover {
+  background-color: rgba(255, 255, 255, .12);
+}
+
+.sidebar ul.receitas li ion-icon {
+  color: #BBB;
+  margin-right: 5px;
+}
+
+.view {
+  width: calc(100vw - 336px);
+}
+
+.view .navbar {
+  width: calc(100vw - 336px);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.view .navbar .grupo {
+  display: flex;
+}
+
+.view .navbar .grupo *:not(:first-child) {
+  margin-left: 5px;
+}
+
+.view .navbar .grupo *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.view .navbar .botao {
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.view .navbar .botao.fechar {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.view .navbar .botao.fechar:hover {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+.view .navbar .botao.adicionar {
+  background-color: rgba(64, 161, 119, .9);
+  color: #FFF;
+}
+
+.view .navbar .botao.adicionar:hover {
+  background-color: rgba(64, 161, 119, .8);
+}
+
+.view .navbar .botao.excluir {
+  background-color: rgba(255, 0, 0, .8);
+  color: #FFF;
+}
+
+.view .navbar .botao.excluir:hover {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+.pagina {
+  padding: 128px 10px 10px;
+}
+
+.pagina .titulo {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.receita .ingredientes .titulo, .receita .modo-de-preparo .titulo {
+  font-size: 16px;
+  margin-top: 20px;
+} 
+
+.destaque {
+  padding: 20px;
+  background-color: #DDD;
+  margin-top: 10px;
+  line-height: 22px;
+  white-space: pre;
+  border-radius: 5px;
+}
+
+.entrada {
+  display: flex;
+  flex-direction: column;
+}
+
+.entrada .label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.entrada input, .entrada textarea {
+  padding: 12px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+}
+
+.entrada textarea {
+  resize: 0;
+  min-height: 150px;
+}
+
+.adicionar-receita button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: rgba(64, 161, 119, .9);
+  color: #FFF;
+  cursor: pointer;
+}
+
+.adicionar-receita button ion-icon {
+  margin-right: 5px;
+}
+
+.adicionar-receita button:hover {
+  background-color: rgba(64, 161, 119, .8);
+}
+
+.escondido {
+  display: none;
+}
+
